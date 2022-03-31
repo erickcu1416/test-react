@@ -1,11 +1,14 @@
 import { useNavigate } from 'react-router-dom';
-import useForm from './hooks/useForm';
+import useForm from '../../hooks/useForm';
 import useLogin from './hooks/useLogin';
 
 export const LoginPage = () => {
 	const navigate = useNavigate();
 
-	const [signInInputs, onSubmit, onChangeInputs] = useForm(onClickHadler);
+	const [signInInputs, onSubmit, onChangeInputs] = useForm(onClickHadler, {
+		email: '',
+		password: '',
+	});
 	const { onLogin } = useLogin(onRedirect, loginError);
 
 	function loginError(d) {

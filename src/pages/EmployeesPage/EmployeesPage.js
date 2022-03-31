@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import FormEmployee from './components/FormEmployee';
 import Table from './components/Table';
 import { useTable } from './hooks/useTable';
 
@@ -7,7 +8,6 @@ export const EmployeesPage = props => {
 		endpoint: '/v1/examen/employees/erick_chan',
 		source: props.source,
 	});
-	// console.log('ITEMS', items);
 
 	const onPreviousHandler = () => {
 		if (page > 1) {
@@ -60,7 +60,9 @@ export const EmployeesPage = props => {
 							items={items}
 						/>
 					</div>
-					<div className='col-4'>One of three columns</div>
+					<div className='col-3 offset-1'>
+                        <FormEmployee onSuccessForm={() => onSearchItem('')}/>
+                    </div>
 				</div>
 			)}
 		</div>

@@ -13,14 +13,12 @@ export const useTable = ({ endpoint, debug = false }) => {
 	const [totalFound, setTotalFound] = useState(0);
 	const [searchItem, setSearchItem] = useState('');
 	const [page, setPage] = useState(1);
-	//   const [pageSize, setPageSize] = useState(defaultPageSize);
 
 	useEffect(() => {
 		search();
 	}, [page, searchItem]);
 
 	const onChangePage = page => {
-		console.log('CHANGE PAGE', page);
 		setPage(page);
 	};
 
@@ -74,6 +72,6 @@ export const useTable = ({ endpoint, debug = false }) => {
 		items,
 		onChangePage,
 		onSearchItem,
-		search, // use with precaution,
+		search,
 	};
 };
