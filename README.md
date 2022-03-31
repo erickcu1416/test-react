@@ -1,6 +1,6 @@
 # Access
-**Username:**  Admin
-**Password:**  Admin
+**Username:**  admin
+**Password:**  admin
 
 # Deployment on GitHub Pages
 1.- Open your package.json and add a homepage field for your project:
